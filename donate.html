@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+	<head>
+		<title>启善-捐赠大厅</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css"
+			href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400%7CRubik:100,400,700">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/layout.css">
+
+
+
+
+		<style>
+			.ie-panel {
+				display: none;
+				background: #212121;
+				padding: 10px 0;
+				box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+				clear: both;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+			}
+
+			html.ie-10 .ie-panel,
+			html.lt-ie-10 .ie-panel {
+				display: block;
+			}
+
+
+
+			.donate-concent {
+				/* margin-top: 10px; */
+				height: 260px;
+				/* background: #F8F8F8; */
+			}
+
+			.donate-list {
+				margin-left: 20px;
+				padding-top: 20px;
+
+			}
+
+			.donateall {
+				background: #F8F8F8;
+			}
+
+			.text-center {
+				margin-left: 30px;
+
+			}
+
+			.text-right {
+				margin-right: 0;
+
+			}
+
+
+			.donate-table {
+				width: 250px;
+			}
+
+			.donate-btn {
+
+				width: 100%;
+				height: 250px;
+				background: #F8F8F8;
+				margin-top: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.donatebutton {
+				font-size: 14px;
+				font-weight: bold;
+				color: #FF9F00;
+				line-height: 20px;
+				padding: 9px 73px;
+				border: 1px solid #FE9D01;
+				border-radius: 4px;
+				background-color: #FF9F00;
+				color: #fff !important;
+				margin-top: 10px;
+			}
+
+			.text-content {
+				width: 140px;
+				border-radius: 5px;
+				border: gray;
+				height: 30px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			.information {
+				margin-top: 20px;
+			}
+
+			.require-concent {
+
+				height: auto;
+
+			}
+
+			.require-table {}
+
+			.require-list {
+				margin-left: 20px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+
+			}
+
+			.requireall {
+				background: #F8F8F8;
+			}
+
+			.text-list {
+
+				width: 170px;
+				text-align: center;
+			}
+
+			.text-date {
+				width: 100px;
+				text-align: center;
+				margin-right: 0;
+
+			}
+
+
+
+			/*设置div样式的整体布局*/
+			.page-icon {
+				margin: 20px 0 0 0;
+				/*设置距离顶部20像素*/
+				font-size: 0;
+				/*修复行内元素之间空隙间隔*/
+				text-align: center;
+				/*设置内容居中显示*/
+			}
+
+			/*设置共有的的样式布局，主要是进行代码优化，提高运行效率*/
+			.page-icon a,
+			.page-disabled,
+			.page-next {
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				padding: 4px 10px 5px;
+				font-size: 14PX;
+				/*修复行内元素之间空隙间隔*/
+				margin-right: 10px;
+			}
+
+			/*对 a 标签进行样式布局 */
+			.page-icon a {
+				text-decoration: none;
+				/*取消链接的下划线*/
+				color: #005aa0;
+			}
+
+			.page-current {
+				color: #ff6600;
+				padding: 4px 10px 5px;
+				font-size: 14PX;
+				/*修复行内元素之间空隙间隔*/
+			}
+
+			.page-disabled {
+				color: #ccc;
+			}
+
+			.page-next i,
+			.page-disabled i {
+				cursor: pointer;
+				/*设置鼠标经过时的显示状态，这里设置的是显示状态为小手状态*/
+				display: inline-block;
+				/*设置显示的方式为行内块元素*/
+				width: 5px;
+				height: 9px;
+				background-image: url(http://img.mukewang.com/547fdbc60001bab900880700.gif);
+				/*获取图标的背景链接*/
+			}
+
+			.page-disabled i {
+				background-position: -80px -608px;
+				margin-right: 3px;
+			}
+
+			.page-next i {
+				background-position: -62px -608px;
+				margin-left: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+					src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+					alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+		</div>
+		<div class="preloader">
+			<div class="preloader-body">
+				<div class="cssload-container">
+					<div class="cssload-speeding-wheel"></div>
+				</div>
+				<p>Loading...</p>
+			</div>
+		</div>
+		<div class="page">
+
+			<!-- Page Header-->
+			<header class="section page-header">
+				<!-- RD Navbar-->
+				<div class="rd-navbar-wrap">
+					<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed"
+						data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+						data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+						data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+						data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+						data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px"
+						data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true"
+						data-xl-stick-up="true" data-xxl-stick-up="true">
+						<div class="rd-navbar-main-outer">
+							<div class="rd-navbar-main">
+								<!-- RD Navbar Panel-->
+								<div class="rd-navbar-panel">
+									<!-- RD Navbar Toggle-->
+									<button class="rd-navbar-toggle"
+										data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+									<!-- RD Navbar Brand-->
+									<div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
+												src="images/图标.png" alt="" width="207" height="51" /></a></div>
+								</div>
+								<div class="rd-navbar-main-element">
+									<div class="rd-navbar-nav-wrap">
+										<!-- RD Navbar Nav-->
+										<ul class="rd-navbar-nav one">
+											<li class="rd-nav-item"><a class="rd-nav-link" href="index.html">首页</a>
+											</li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="news.html">新闻资讯</a>
+												<ul class="two two_1">
+													<li><a class="rd-nav-link" href="news.html">启善看板</a></li>
+													<li><a class="rd-nav-link" href="news.html">启善资讯</a></li>
+												</ul>
+											</li>
+											<li class="rd-nav-item active"><a class="rd-nav-link"
+													href="Requirelobby.html">捐赠大厅</a>
+												<ul class="two two_1">
+													<li><a class="rd-nav-link" href="Requirelobby.html">社区需求</a></li>
+													<li><a class="rd-nav-link" href="yiqumap.html">疫区分布</a></li>
+												</ul>
+											</li>
+											<li class="rd-nav-item"><a class="rd-nav-link"
+													href="Logpartner.html">物流合作</a>
+											</li>
+											<li class="rd-nav-item"><a class="rd-nav-link"
+													href="aboutUs.html">关于启善</a>
+											</li>
+										</ul>
+										<a class="button button-primary button-sm" href="pRequire.html">发布需求</a>
+									</div>
+								</div>
+								<a class="button button-primary button-sm" href="pRequire.html">发布需求</a>
+								<ul class="nav rd-navbar-nav one">
+									<li class="dropdown ml20 mr0 rd-nav-item">
+										<a href="https://huangsanzhai.github.io/Qishan/userlogin/login.html" class="dropdown-toggle"><span
+												id="name">登录/注册</span>
+											<span class="caret" style="top: -6px"></span></a>
+										<ul class="two two_1">
+											<li><a href="myCenter.html">我的账号</a></li>
+											<li><a href="myCenter.html">我的捐赠车</a></li>
+											<li><a href="myCenter.html">我的需求</a></li>
+											<li><a
+													href="https://huangsanzhai.github.io/superadmin/html/shequlogin">社区管理员</a>
+											</li>
+										<li><a href="https://huangsanzhai.github.io/Qishan/adminLoign/superLogin.html">超级管理员</a></li>
+											<!-- <li><a href="../adminLoign/superLogin.html">超级管理员</a></li> -->
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<section class="parallax-container" data-parallax-img="images/1.png">
+				<div class="parallax-content breadcrumbs-custom context-dark">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-lg-9">
+								<h2 class="breadcrumbs-custom-title">豫园街道社区</h2>
+								<ul class="breadcrumbs-custom-path">
+									<li><a href="Requirelobby.html">需求大厅</a></li>
+									<li class="active">社区需求</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- Base typography -->
+			<section class="section section-lg bg-default">
+				<div class="container">
+					<div class="row row-50 flex-lg-row-reverse justify-content-xl-between">
+						<div class="col-xl-4">
+							<div class="block-bordered-left">
+								<div class="row row-40">
+
+									<div class="col-sm-6 col-xl-12">
+
+										<div class="donateall" style="width: 298px">
+											<div class="donate-list">
+
+												<div class="donate-concent" style="min-height: 325px;">
+													<h5>近期捐赠</h5>
+													<table class="donate-table" style="table-layout: fixed">
+														<thead>
+															<tr>
+																<th width="70">用户名</th>
+																<th class="text-center">捐赠内容</th>
+																<th class="text-right" width="45">日期</th>
+															</tr>
+														</thead>
+														<tbody id="newDonateList">
+															<tr>
+																<td>孟金翔</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-24</td>
+															</tr>
+															<tr>
+																<td>赖克顿</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-24</td>
+															</tr>
+															<tr>
+																<td>黄龙</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-24</td>
+															</tr>
+															<tr>
+																<td>相玥</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-24</td>
+															</tr>
+															<tr>
+																<td>靳喜月</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-24</td>
+															</tr>
+															<tr>
+																<td>徐弘月</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-23</td>
+															</tr>
+															<tr>
+																<td>关雨晗</td>
+																<td class="text-center">水果蔬菜</td>
+																<td class="text-right">11-23</td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="donate-btn" style="width: 298px">
+											<form class="information">
+												姓名:
+												<input type="text" name="firstname" class="text-content">
+												<br>
+												电话:
+												<input type="text" name="phone" class="text-content">
+												<br>
+
+												物资:
+												<input type="text" name="phone" class="text-content">
+												<br>
+												地址:
+												<input type="text" name="address" class="text-content">
+												<br>
+											</form>
+
+											<a href="Requirelobby.html" class="donatebutton"
+												onclick='return confirm("恭喜您捐赠成功，后续会有管理员联系您");'>捐赠</a>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						<div class="col-xl-7">
+
+
+
+							<div class="requireall" style="width: 708px">
+								<div class="require-list">
+
+									<div class="require-concent" style="min-height: 325px;">
+										<h5>需求列表</h5>
+										<table class="require-table" style="table-layout: fixed">
+											<thead>
+												<tr>
+													<th width="100px">需求用户</th>
+													<th class="text-list">物资类别</th>
+													<th class="text-list">具体物资</th>
+													<th class="text-list">数量</th>
+													<!-- <th class="text-center">捐赠内容</th> -->
+
+													<th class="text-date" width="45">日期</th>
+
+												</tr>
+											</thead>
+											<tbody id="newDonateList">
+												<tr>
+													<td>孟金翔</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">8</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>赖克顿</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">10</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>黄龙</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">12</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>相玥</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">16</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>黄龙</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">12</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>相玥</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">16</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>黄龙</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">12</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>相玥</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">16</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>黄龙</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">12</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>相玥</td>
+													<td class="text-list">生活物资</td>
+													<td class="text-list">水果蔬菜</td>
+													<td class="text-list">16</td>
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>靳喜月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+
+													<td class="text-date">11-24</td>
+												</tr>
+												<tr>
+													<td>徐弘月</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+												<tr>
+													<td>关雨晗</td>
+													<td class="text-list">医疗物资</td>
+													<td class="text-list">防护服、口罩</td>
+													<td class="text-list">12、100</td>
+													<td class="text-date">11-23</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+
+									<div class="page-icon">
+										<span class="page-disabled"><i></i>上一页</span>
+										<span class="page-current">1</span>
+										<a href="#">2</a>
+										<a href="#">3</a>
+										<a href="#">4</a>
+										<a href="#">5</a>
+										<a href="#">6</a>
+										<a href="#">7</a>
+										<a href="#">...</a>
+										<a class="page-next" href="#">下一页<i></i></a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Unordered List-->
+			<section class="section section-lg bg-default">
+				<div class="container">
+					<div class="row row-50">
+						<div class="col-lg-6">
+							<h3>社区需求汇总</h3>
+							<div class="row row-50">
+								<div class="col-sm-6">
+									<ul class="list-marked">
+										<li>口罩&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp总计1000</li>
+										<li>防护服&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp总计2000</li>
+										<li>米面&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp总计1000份</li>
+										<li>蔬菜&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp总计1000份</li>
+										<li>水果&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp总计1000份</li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<ol class="list-ordered">
+										<li>口罩</li>
+										<li>防护服</li>
+										<li>米面</li>
+										<li>蔬菜</li>
+										<li>水果</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Page Footer-->
+			<footer class="section footer-minimal context-dark">
+				<div class="container wow-outer">
+					<div class="wow fadeIn">
+						<div class="row row-50 row-lg-60">
+							<div class="col-12"><a href="index.html"><img src="images/图标.png" alt="" width="207"
+										height="51" /></a></div>
+							<div class="col-12">
+								<ul class="footer-minimal-nav">
+									<li><a href="index.html">首页</a></li>
+									<li><a href="news.html">新闻资讯</a></li>
+									<li><a href="Requirelobby.html">捐赠大厅</a></li>
+									<li><a href="Logpartner.html">物流合作</a></li>
+									<li><a href="aboutUs.html">关于启善</a></li>
+									<li><a href="pRequire.html">发布需求</a></li>
+
+								</ul>
+							</div>
+							<div class="col-12">
+								<ul class="social-list">
+									<li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook"
+											href="#"></a></li>
+									<li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram"
+											href="#"></a></li>
+									<li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter"
+											href="#"></a></li>
+									<li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-youtube-play"
+											href="#"></a></li>
+									<li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-pinterest-p"
+											href="#"></a></li>
+								</ul>
+							</div>
+						</div>
+						<p class="rights"><span>&copy;&nbsp;</span><span
+								class="copyright-year"></span><span>&nbsp;</span><span>.&nbsp;</span><span>&nbsp;</span>Design&nbsp;by&nbsp;启善
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="snackbars" id="form-output-global"></div>
+		<script src="js/core.min.js"></script>
+		<script src="js/script.js"></script>
+
+
+	</body>
+</html>
