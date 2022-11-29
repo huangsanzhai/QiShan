@@ -1,0 +1,46 @@
+.one li {
+	/* 设置列表项的样式 */
+	/* float: left;    /* 将一级导航的列表进行浮动 改为横向排列 */
+	*/ margin-right: 5px;
+	width: 140px;
+	text-align: center;
+	line-height: 40px;
+
+
+}
+
+.one li:hover {
+	/* 当鼠标移上时一级导航时的样式 */
+	background-color: #a6e22e;
+	/* 当鼠标移上时背景颜色的样式 honeydew */
+	/* background-color:#7FBC41; */
+	border-radius: 5px;
+	color: red;
+	/* 字体颜色 */
+}
+
+.two {
+	position: absolute;
+	display: none;
+	/* 将二级导航隐藏显示 */
+}
+
+.one li:hover .two {
+	display: block;
+	/* 当鼠标移到一级导航时  二级导航显示 */
+}
+
+.two li {
+	background-color: cadetblue;
+	/* 设置背景颜色 cadetblue */
+}
+
+.two li:hover {
+	/* background-color:#7FBC4E; */
+	background-color: #a6e22e;
+	color: #fff;
+	/* 当鼠标移上时背景颜色的样式 honeydew */
+}
+
+
+

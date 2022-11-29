@@ -1,0 +1,106 @@
+.flex-reverse {
+    /* display: -webkit-flex;
+    display: -ms-flexbox;
+    -ms-flex-direction: row-reverse;
+    -ms-align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; */
+	
+	text-align: center;
+}
+
+/* .flex-wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-align-items: center;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+
+/* 社区列表 */
+.page-title img {
+    margin: 10px 0;
+    height: 24px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    background-color: #F8F8F8;
+    padding: 0 16px;
+    border-radius: 4px;
+	margin-bottom: 70px;
+	float: right;
+	margin-right: 100px;
+}
+
+    .search-box img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .search-box input {
+        display: inline-block;
+        max-width: 460px;
+        width: 460px;
+        height: 16px;
+        font-size: 14px;
+        font-family: Helvetica;
+        line-height: 17px;
+        margin-left: 10px;
+        border: 0;
+        background-color: #F8F8F8;
+    }
+
+    .search-box button {
+        font-size: 14px;
+        font-family: Helvetica;
+        line-height: 17px;
+        color: #999;
+        border: 0;
+        background-color: #F8F8F8;
+        padding-left: 10px;
+        border-left: 1px solid #999;
+    }
+
+    .search-box button:hover {
+        color: #333;
+        border-left: 1px solid #333;
+    }
+
+.yiqing-map {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FF9F00;
+    line-height: 17px;
+    padding: 10px 20px;
+    border: 1px solid #FF9F00;
+    border-radius: 4px;
+	float: right;
+	margin-right: 200px;
+    /* margin-left: 180px; */
+}
+
+    .yiqing-map:hover {
+        color: #fff !important;
+        background: #FF9F00;
+    }
+
+.form-group{
+	margin-top: 20px;
+	/* margin-left: 160px; */
+}
+
+.col-sm-8{
+	margin-left: 30px;
+}
